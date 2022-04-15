@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get your needs</title>
+
+    <style>
+        h2{
+            background-color: black;
+            color: white;
+            width: 60%;
+            text-align: center;
+            border-radius: 15px;
+            margin-left: 250px;
+            margin-bottom: 80px;
+        }
+
+        #books{
+            margin-left: 336px;
+            margin-right: 288px;
+            border: solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        body{
+            height: 550px;
+            background: linear-gradient(white,gray);
+        }
+
+        #lt{
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 20px;
+        }
+        #lt:hover{
+            border-radius: 40px;
+            background-color: rgb(135, 139, 139);
+        }
+        #rt{
+            margin-top: -108px;
+            margin-left: 1044px;
+            cursor: pointer;
+            padding: 20px;
+        }
+        /* #rt:hover{
+            margin-left: 10px;
+            border-radius: 40px;
+            background-color: rgb(135, 139, 139);
+        } */
+
+    </style>
+</head>
+<body>
+    <h2>
+        What do you want to buy ???..
+    </h2>
+    <div id="con">
+        <img id="lt" src="C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/lft.png" alt="lft" width="90px">
+        <a id="linnk" href="C:/Users/HP/OneDrive/Desktop/noobathon/public/htmls/booksb.html">
+            <img id="books" src="C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/books copy.png" width="300px" height="300px" alt="">
+        </a>
+        <img id="rt" src="C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/ryt.png" alt="ryt" width="90px">
+    </div>
+<script>
+        var imgs=[
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/books copy.png",
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/calculator.png",
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/imgs/cycling.png"
+    ]
+    var linkk=[
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/htmls/booksb.html",
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/htmls/tools.html",
+    "C:/Users/HP/OneDrive/Desktop/noobathon/public/htmls/cycles.html"
+    ]
+    var slider = document.getElementById('books')
+    var linnk= document.getElementById('linnk')
+    var next = document.getElementById('rt')
+    var prev = document.getElementById('lt')
+    var num = 0
+    next.addEventListener('click',()=>{
+        if(num<imgs.length){
+            num+=1;
+            slider.src=imgs[num]
+            linnk.href=linkk[num]
+        }
+        if(num>=imgs.length){
+            num=0;
+            num+=1;
+            linnk.href=linkk[num]
+            slider.src=imgs[num]
+        }
+
+
+    })
+    prev.addEventListener('click',()=>{
+        if(num>0){
+            num-=1;
+            linnk.href=linkk[num]
+            slider.src=imgs[num]
+        }
+    })
+</script>
+</body>
+</html>

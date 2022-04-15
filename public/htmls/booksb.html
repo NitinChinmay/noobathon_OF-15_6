@@ -1,0 +1,751 @@
+<html>
+
+<head>
+    <style type="text/css">
+        .books {
+            box-shadow: 0px 6px 7px 0px;
+            width: 280px;
+            margin: auto;
+            text-align: center;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .cost {
+            color: silver;
+            font-size: 20px;
+        }
+
+        #in {
+            background-image: url('/css/searchicon.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 60%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            position: center;
+        }
+
+        .books input[type="button"] {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background-color: purple;
+            width: 25%;
+
+        }
+
+        .books input[type="text"] {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: rgb(44, 5, 5);
+            background-color: rgb(224, 224, 238);
+            width: 50%;
+
+        }
+
+        .books button {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background-color: grey;
+            width: 100%;
+            display: none;
+
+        }
+
+        .books p {
+            color: brown;
+            font-size: 16 px;
+        }
+
+        .books b {
+            color: grey;
+            font-size: 16 px;
+        }
+
+        .space {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .books input[type="button"]:hover {
+            opacity: 0.7;
+            background-color: orange;
+            font-size: 28 px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .books button:hover {
+            opacity: 0.7;
+            background-color: green;
+            font-size: 28 px;
+
+        }
+
+        #myUL li a {
+            display: block;
+            color: red;
+            text-decoration: none;
+        }
+
+        #myUL li {
+            display: inline-block;
+        }
+    </style>
+
+        <style>
+            #ser:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+#in{
+    position: absolute;
+    padding: 5px;
+    margin-left: 35px;
+    color: black;
+    /* margin-left: 60px; */
+    border: none;
+    z-index: 10;
+    border-radius: 25px 0 0 25px;
+    width: 64%;
+    height: 29px;
+}
+#ser{
+    margin-left: 383px;
+    position: absolute;
+    /* margin-top: px; */
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    margin-top: 0px;
+    height: 29px;
+    font-size: small;
+}
+#nav{
+    background-color:black;
+    color: white;
+    width: 47%;
+    height: 38px;
+    border-radius: 5px;
+    margin: 0px;
+    margin-left: 307px;
+    padding-top: 12px;
+    position: relative;
+}
+#b{
+    margin-top: -6px;
+    margin-left: 28px;
+    width: 50px;
+    height: 50px;
+}
+
+.books{
+    margin: 8px;
+}
+
+        </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav">
+        <img id="b" src="books copy.png"  alt="">
+        <!-- <a id="home" href="index.html">Home</a> -->
+        <input type="text" id="in" placeholder="search your book here...." onkeyup="book()">
+        <button id="ser">search</button>
+        </div>
+    </nav>
+
+     <!-- <input type="text" id="in" onkeyup="book()" placeholder="Search for books"> -->
+
+    <ul id="myUL">
+        
+        
+        <div class="books">
+            <li>
+                <img src="a textbook of engineering chemistry - shashi chawla.jpg">
+                <h2><a href=""> Engineering Chemistry</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.129 <s>Rs.599</s></h3>
+                </p>
+                <p>This is a book recommended to students of engineering for chemistry.
+                    <br><br><b>Recommended to : </b>Mechanical ,Civil,EEE ,Chemical
+                </p>
+                <input type=button name="+" value="+" id="add1" onClick="add1()"><input type="text" id="txt1"
+                    readonly><input type=button value="-" name="-" id="sub1" onClick="sub1()"><br>
+                <button id="btn1">Add to cart</button>
+
+            </li>
+        </div>
+
+
+
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="advanced engineering mathematics r k jain and s r k iyengar.jpg">
+                <h2><a href="">Advanced Engineering Mathematics - R K Jain and S R K Iyengar</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.389 <s>Rs.799</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering of Mathematics.
+                    <br><br><b>Recommended to : </b>Mechanical,Civil,EEE,CSE,ECE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add2()"><input type="text" id="txt2"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub2()"><br>
+                <button id="btn2">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img
+                    src="Bhargava N. N., D C Kulshreshtha and S C Gupta, Basic Electronics & Linear Circuits, 2nd edition.jpg">
+                <h2><a href="">Basic Electronics and Linear Circuits - N N Bhargava, D C Kulshreshtha and S C Gupta</a>
+                </h2>
+                <p class="cost"></p>
+                <h3>Rs.489 <s>Rs.899</s></h3>
+                </p>
+                <p>This is a book recommended to students of engineering for Electricals.
+                    <br><br><b>Recommended to : </b>Mechanical,EEE,ECE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add3()"><input type="text" id="txt3"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub3()"><br>
+                <button id="btn3">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="big c++.jpg">
+                <h2><a href="">Big C++</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.489 <s>Rs.899</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering of Computer Science.
+                    <br><br><b>Recommended to : </b>CSE,ECE,EEE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add4()"><input type="text" id="txt4"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub4()"><br>
+                <button id="btn4">Add to cart</button>
+
+            </li>
+        </div>
+        <!-- <br><br><br><br> -->
+
+        <div class="books">
+            <li>
+                <img src="bs grewal -  higher engineering mathematics.jpg">
+                <h2><a href=""> Higher Engineering Mathematics - B S Grewal</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.279 <s>Rs.549</s></h3>
+                </p>
+                <p>This is a book recommended to students of engineering for Mathematics.
+                    <br><br><b>Recommended to : </b>Preferably All Branches.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add5()"><input type="text" id="txt5"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub5()"><br>
+                <button id="btn5">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="electronic devices and circuit theory -  boylestad and nashelsk.jpg">
+                <h2><a href="">Electronic Devices and Circuit Theory - Boylestad and Nashelkey</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.799 <s>Rs.1299</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Electronics.
+                    <br><br><b>Recommended to : </b>EEE and ECE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add6()"><input type="text" id="txt6"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub6()"><br>
+                <button id="btn6">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="elements of mechanical engineering.jpg">
+                <h2><a href="">Elements of Mechanical Engineering</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.599 <s>Rs.899</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Mechanics.
+                    <br><br><b>Recommended to : </b>Mechanical,Civil,MME.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add7()"><input type="text" id="txt7"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub7()"><br>
+                <button id="btn7">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="engineering mechanics statics- j l meriam.jpg">
+                <h2><a href="">Engineering Mechanics - Statics - J L Meriam</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.559 <s>Rs.799</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Mechanics.
+                    <br><br><b>Recommended to : </b>Mechanical,Civil,MME.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add8()"><input type="text" id="txt8"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub8()"><br>
+                <button id="btn8">Add to cart</button>
+
+            </li>
+        </div>
+        <br><br><br><br>
+        <div class="books">
+            <li>
+                <img src="engineering mechanics dynamics - j l meriam.jpg">
+                <h2><a href=""> Engineering Meechanics Dynamics - J L Meriam</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.559 <s>Rs.799</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Mechanics.
+                    <br><br><b>Recommended to : </b>Mechanical,Civil,MME.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add9()"><input type="text" id="txt9"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub9()"><br>
+                <button id="btn9">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="Engineering Network Analysis and Filter Design.jpg">
+                <h2><a href=""> Engineering Network Analysis and Filter Design - G Q Bhise,P R Chadha.</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.799 <s>Rs.1199</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering of Electricals.
+                    <br><br><b>Recommended to : </b>EEE,MME,ECE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add10()"><input type="text" id="txt10"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub10()"><br>
+                <button id="btn10">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="Fundamentals of Python- Data Structures.jpg">
+                <h2><a href=""> Fundamentals of Python - Data Structures</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.119 <s>Rs.549</s></h3>
+                </p>
+                <p>This is a book recommended to students of engineering for mechanics.
+                    <br><br><b>Recommended to : </b>EEE,ECE,CSE.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add11()"><input type="text" id="txt11"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub11()"><br>
+                <button id="btn11">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+
+        <div class="books">
+            <li>
+                <img src="Introduction to Bioinformatics.jpg">
+                <h2><a href=""> Introduction to Bioinformatics</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.699 <s>Rs.1099</s></h3>
+                </p>
+                <p>This is a book recommended to students of engineering for Biology.
+                    <br><br><b>Recommended to : </b>BioTechnology.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add12()"><input type="text" id="txt12"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub12()"><br>
+                <button id="btn12">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="network analysis - van valken berg.jpg">
+                <h2><a href="">Electrical Network Analysis - M E Van Valkenburg </a></h2>
+                <p class="cost"></p>
+                <h3>Rs.759 <s>Rs.1299</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Electricals.
+                    <br><br><b>Recommended to : </b>EEE,ECE,MME.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add13()"><input type="text" id="txt13"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub13()"><br>
+                <button id="btn13">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="optics ajoy ghatak.jpg">
+                <h2><a href=""> Optics - Ajoy Ghatak</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.559<s>Rs.899</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Physics.
+                    <br><br><b>Recommended to : </b>Preferably All Branches.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add14()"><input type="text" id="txt14"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub14()"><br>
+                <button id="btn14">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="Practical Biochemistry - Principles and Techniques.jpg">
+                <h2><a href=""> Practical Biochemistry - Principles and Techniques</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.659 <s>Rs.999</s></h3>
+                </p>
+                <p>This is a book recommended to students of Engineering for Biology.
+                    <br><br><b>Recommended to : </b>BioTechnology.
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add15()"><input type="text" id="txt15"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub15()"><br>
+                <button id="btn15">Add to cart</button>
+
+            </li>
+        </div>
+
+        <!-- <br><br><br><br> -->
+    </div>
+
+        <script>
+            function book() {
+                var input, filter, ul, li, a, i, txtValue
+                input = document.getElementById('in')
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = ""
+                    }
+                    else {
+                        li[i].style.display = "none"
+                    }
+                }
+            }
+        </script>
+
+        <script>
+            var val1 = 0
+            function add1() {
+                var btn1 = document.getElementById('btn1')
+                val1 = document.getElementById('txt1').value
+                document.getElementById('txt1').value = ++val1
+                if (val1 > 0) {
+                    btn1.style.display = 'block'
+                }
+
+            }</script>
+        <script>
+            function sub() {
+                var va1 = document.getElementById('txt1').value
+                if (va1 > 0) {
+                    document.getElementById('txt1').value = --va1
+                }
+            }
+        </script>
+
+
+<script>
+    var val2 = 0
+    function add2() {
+        var btn2 = document.getElementById('btn2')
+        val2 = document.getElementById('txt2').value
+        document.getElementById('txt2').value = ++val2
+        if (val2 > 0) {
+            btn2.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub2() {
+        var va2 = document.getElementById('txt2').value
+        if (va2 > 0) {
+            document.getElementById('txt2').value = --va2
+        }
+    }
+</script>
+
+<script>
+    var val3 = 0
+    function add3() {
+        var btn3 = document.getElementById('btn3')
+        val3 = document.getElementById('txt3').value
+        document.getElementById('txt3').value = ++val3
+        if (val3 > 0) {
+            btn3.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub3() {
+        var va3 = document.getElementById('txt3').value
+        if (va3 > 0) {
+            document.getElementById('txt3').value = --va3
+        }
+    }
+</script>
+<script>
+    var val4 = 0
+    function add4() {
+        var btn4 = document.getElementById('btn4')
+        val4 = document.getElementById('txt4').value
+        document.getElementById('txt4').value = ++val4
+        if (val4 > 0) {
+            btn4.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub4() {
+        var va4 = document.getElementById('txt4').value
+        if (va4 > 0) {
+            document.getElementById('txt4').value = --va4
+        }
+    }
+</script>
+<script>
+    var val5 = 0
+    function add5() {
+        var btn5 = document.getElementById('btn5')
+        val5 = document.getElementById('txt5').value
+        document.getElementById('txt5').value = ++val5
+        if (val5 > 0) {
+            btn5.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub5() {
+        var va5 = document.getElementById('txt5').value
+        if (va5 > 0) {
+            document.getElementById('txt5').value = --va5
+        }
+    }
+</script>
+<script>
+    var val6 = 0
+    function add6() {
+        var btn6 = document.getElementById('btn6')
+        val6 = document.getElementById('txt6').value
+        document.getElementById('txt6').value = ++val6
+        if (val6 > 0) {
+            btn6.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub6() {
+        var va6 = document.getElementById('txt6').value
+        if (va6 > 0) {
+            document.getElementById('txt6').value = --va6
+        }
+    }
+</script>
+<script>
+    var val7 = 0
+    function add7() {
+        var btn7 = document.getElementById('btn7')
+        val7 = document.getElementById('txt7').value
+        document.getElementById('txt7').value = ++val7
+        if (val7 > 0) {
+            btn7.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub7() {
+        var va7 = document.getElementById('txt7').value
+        if (va7 > 0) {
+            document.getElementById('txt7').value = --va7
+        }
+    }
+</script>
+<script>
+    var val8 = 0
+    function add8() {
+        var btn8 = document.getElementById('btn8')
+        val8 = document.getElementById('txt8').value
+        document.getElementById('txt8').value = ++val8
+        if (val8 > 0) {
+            btn8.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub8() {
+        var va8 = document.getElementById('txt8').value
+        if (va8 > 0) {
+            document.getElementById('txt8').value = --va8
+        }
+    }
+</script>
+<script>
+    var val9 = 0
+    function add9() {
+        var btn2 = document.getElementById('btn9')
+        val9 = document.getElementById('txt9').value
+        document.getElementById('txt9').value = ++val9
+        if (val9 > 0) {
+            btn9.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub9() {
+        var va9 = document.getElementById('txt9').value
+        if (va9 > 0) {
+            document.getElementById('txt9').value = --va9
+        }
+    }
+</script>
+<script>
+    var val10 = 0
+    function add10() {
+        var btn10 = document.getElementById('btn10')
+        val10 = document.getElementById('txt10').value
+        document.getElementById('txt10').value = ++val10
+        if (val10 > 0) {
+            btn10.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub10() {
+        var va10 = document.getElementById('txt10').value
+        if (va10 > 0) {
+            document.getElementById('txt10').value = --va10
+        }
+    }
+</script>
+<script>
+    var val11 = 0
+    function add11() {
+        var btn11 = document.getElementById('btn11')
+        val11 = document.getElementById('txt11').value
+        document.getElementById('txt11').value = ++val11
+        if (val11 > 0) {
+            btn11.style.display = 'block'
+        }
+
+    }
+</script>
+<script>
+    function sub11() {
+        var va11 = document.getElementById('txt11').value
+        if (va11 > 0) {
+            document.getElementById('txt11').value = --va11
+        }
+    }
+</script>
+<script>
+    var val12 = 0
+    function add12() {
+        var btn12 = document.getElementById('btn12')
+        val12 = document.getElementById('txt12').value
+        document.getElementById('txt12').value = ++val12
+        if (val12 > 0) {
+            btn12.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub13() {
+        var va13 = document.getElementById('txt13').value
+        if (va13 > 0) {
+            document.getElementById('txt13').value = --va13
+        }
+    }
+</script>
+<script>
+    var val13 = 0
+    function add13() {
+        var btn13 = document.getElementById('btn13')
+        val13 = document.getElementById('txt13').value
+        document.getElementById('txt13').value = ++val13
+        if (val13 > 0) {
+            btn13.style.display = 'block'
+        }
+
+    }
+    </script>
+<script>
+    function sub14() {
+        var va14 = document.getElementById('txt14').value
+        if (va14 > 0) {
+            document.getElementById('txt14').value = --va14
+        }
+    }
+</script>
+<script>
+    var val14 = 0
+    function add14() {
+        var btn14 = document.getElementById('btn14')
+        val14 = document.getElementById('txt14').value
+        document.getElementById('txt14').value = ++val14
+        if (val14 > 0) {
+            btn14.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub15() {
+        var va15 = document.getElementById('txt15').value
+        if (va15 > 0) {
+            document.getElementById('txt15').value = --va15
+        }
+    }
+</script>
+<script>
+    var val15 = 0
+    function add15() {
+        var btn15 = document.getElementById('btn15')
+        val15 = document.getElementById('txt15').value
+        document.getElementById('txt15').value = ++val15
+        if (val15 > 0) {
+            btn15.style.display = 'block'
+        }
+
+    }</script>

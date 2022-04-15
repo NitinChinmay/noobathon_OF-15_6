@@ -1,0 +1,359 @@
+<html>
+
+<head>
+    <style type="text/css">
+        .books {
+            box-shadow: 0px 6px 7px 0px;
+            width: 280px;
+            margin: auto;
+            text-align: center;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .cost {
+            color: silver;
+            font-size: 20px;
+        }
+
+        #in {
+            background-image: url('/css/searchicon.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 60%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            position: center;
+        }
+
+        .books input[type="button"] {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background-color: purple;
+            width: 25%;
+
+        }
+
+        .books input[type="text"] {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: rgb(44, 5, 5);
+            background-color: rgb(224, 224, 238);
+            width: 50%;
+
+        }
+
+        .books button {
+
+            text-align: center;
+            cursor: pointer;
+            border: transparent;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background-color: grey;
+            width: 100%;
+            display: none;
+
+        }
+
+        .books p {
+            color: brown;
+            font-size: 16 px;
+        }
+
+        .books b {
+            color: grey;
+            font-size: 16 px;
+        }
+
+        .space {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .books input[type="button"]:hover {
+            opacity: 0.7;
+            background-color: orange;
+            font-size: 28 px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .books button:hover {
+            opacity: 0.7;
+            background-color: green;
+            font-size: 28 px;
+
+        }
+
+        #myUL li a {
+            display: block;
+            color: red;
+            text-decoration: none;
+        }
+
+        #myUL li {
+            display: inline-block;
+        }
+    </style>
+
+        <style>
+            #ser:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+#in{
+    position: absolute;
+    padding: 5px;
+    margin-left: 35px;
+    color: black;
+    /* margin-left: 60px; */
+    border: none;
+    z-index: 10;
+    border-radius: 25px 0 0 25px;
+    width: 64%;
+    height: 29px;
+}
+#ser{
+    margin-left: 383px;
+    position: absolute;
+    /* margin-top: px; */
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    margin-top: 0px;
+    height: 29px;
+    font-size: small;
+}
+#nav{
+    background-color:black;
+    color: white;
+    width: 47%;
+    height: 38px;
+    border-radius: 5px;
+    margin: 0px;
+    margin-left: 307px;
+    padding-top: 12px;
+    position: relative;
+}
+#b{
+    margin-top: -6px;
+    margin-left: 28px;
+    width: 50px;
+    height: 50px;
+}
+
+.books{
+    margin: 8px;
+}
+
+        </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav">
+        <img id="b" src="cycling.png"  alt="">
+        <!-- <a id="home" href="index.html">Home</a> -->
+        <input type="text" id="in" placeholder="search your book here....">
+        <button id="ser">search</button>
+        </div>
+    </nav>
+
+    <!-- <input type="text" id="in" onkeyup="book()" placeholder="Search for books"> -->
+
+    <ul id="myUL">
+        
+        
+        <div class="books">
+            <li>
+                <img src="hercules dynor - v brake - 4499.jpg">
+                <h2><a href=""> hercules dynor - v brake</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.3249<s>Rs.5299</s></h3>
+                </p>
+
+                <input type=button name="+" value="+" id="add1" onClick="add1()"><input type="text" id="txt1"
+                    readonly><input type=button value="-" name="-" id="sub1" onClick="sub1()"><br>
+                <button id="btn1">Add to cart</button>
+
+            </li>
+        </div>
+
+
+
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="hercules flunk - 8000.jpg">
+                <h2><a href="">hercules flunk - 8000</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.6799 <s>Rs.9199</s></h3>
+                </p>
+
+                <input type=button name="+" value="+" id="add" onClick="add2()"><input type="text" id="txt2"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub2()"><br>
+                <button id="btn2">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img
+                    src="vector 91 - 12899.jpg">
+                <h2><a href="">vector 91 - 12899</a>
+                </h2>
+                <p class="cost"></p>
+                <h3>Rs.9859 <s>Rs.12999</s></h3>
+                </p>
+
+                <input type=button name="+" value="+" id="add" onClick="add3()"><input type="text" id="txt3"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub3()"><br>
+                <button id="btn3">Add to cart</button>
+
+            </li>
+        </div>
+        <div class="space"></div>
+        <div class="books">
+            <li>
+                <img src="vector 91t - 8889.jpg">
+                <h2><a href="">vector 91t - 8889</a></h2>
+                <p class="cost"></p>
+                <h3>Rs.6489 <s>Rs.9699</s></h3>
+                </p>
+                <input type=button name="+" value="+" id="add" onClick="add4()"><input type="text" id="txt4"
+                    readonly><input type=button value="-" name="-" id="sub" onClick="sub4()"><br>
+                <button id="btn4">Add to cart</button>
+
+            </li>
+        </div>
+       
+
+        <script>
+            function book() {
+                var input, filter, ul, li, a, i, txtValue
+                input = document.getElementById('in')
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = ""
+                    }
+                    else {
+                        li[i].style.display = "none"
+                    }
+                }
+            }
+        </script>
+
+        <script>
+            var val1 = 0
+            function add1() {
+                var btn1 = document.getElementById('btn1')
+                val1 = document.getElementById('txt1').value
+                document.getElementById('txt1').value = ++val1
+                if (val1 > 0) {
+                    btn1.style.display = 'block'
+                }
+
+            }</script>
+        <script>
+            function sub() {
+                var va1 = document.getElementById('txt1').value
+                if (va1 > 0) {
+                    document.getElementById('txt1').value = --va1
+                }
+            }
+        </script>
+
+
+<script>
+    var val2 = 0
+    function add2() {
+        var btn2 = document.getElementById('btn2')
+        val2 = document.getElementById('txt2').value
+        document.getElementById('txt2').value = ++val2
+        if (val2 > 0) {
+            btn2.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub2() {
+        var va2 = document.getElementById('txt2').value
+        if (va2 > 0) {
+            document.getElementById('txt2').value = --va2
+        }
+    }
+</script>
+
+<script>
+    var val3 = 0
+    function add3() {
+        var btn3 = document.getElementById('btn3')
+        val3 = document.getElementById('txt3').value
+        document.getElementById('txt3').value = ++val3
+        if (val3 > 0) {
+            btn3.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub3() {
+        var va3 = document.getElementById('txt3').value
+        if (va3 > 0) {
+            document.getElementById('txt3').value = --va3
+        }
+    }
+</script>
+<script>
+    var val4 = 0
+    function add4() {
+        var btn4 = document.getElementById('btn4')
+        val4 = document.getElementById('txt4').value
+        document.getElementById('txt4').value = ++val4
+        if (val4 > 0) {
+            btn4.style.display = 'block'
+        }
+
+    }</script>
+<script>
+    function sub4() {
+        var va4 = document.getElementById('txt4').value
+        if (va4 > 0) {
+            document.getElementById('txt4').value = --va4
+        }
+    }
+</script>
+<script>
+    var val5 = 0
+    function add5() {
+        var btn5 = document.getElementById('btn5')
+        val5 = document.getElementById('txt5').value
+        document.getElementById('txt5').value = ++val5
+        if (val5 > 0) {
+            btn5.style.display = 'block'
+        }
+
+    }</script>
